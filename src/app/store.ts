@@ -13,7 +13,7 @@ export interface IAppState {
 export const INITIAL_STATE: IAppState = {
     todos: [],
     lastUpdate: null
-}
+};
 
 /*
 The state is the previous state of the application and action is an object describing the change which has been dispatched.
@@ -33,9 +33,9 @@ export function rootReducer(state: IAppState, action): IAppState {
             });
 
         case TOGGLE_TODO:
-            var todo = state.todos.find(t => t.id === action.id);
+            const todo = state.todos.find(t => t.id === action.id);
             console.log('Item to be deleted' + JSON.stringify(todo));
-            var index = state.todos.indexOf(todo);
+            const index = state.todos.indexOf(todo);
             console.log('Index of completed item:' + index);
             // https://codeburst.io/javascript-es6-the-spread-syntax-f5c35525f754
             return Object.assign({}, state, {

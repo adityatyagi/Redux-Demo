@@ -22,10 +22,10 @@ import { FormsModule } from '@angular/forms';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { 
+export class AppModule {
   constructor (devTools: DevToolsExtension, ngRedux: NgRedux<IAppState>) {
 
-    var enhancers = isDevMode() ? [devTools.enhancer()] : [];
+    const enhancers = isDevMode() ? [devTools.enhancer()] : [];
     ngRedux.configureStore(rootReducer, INITIAL_STATE, [], enhancers);
   }
 }

@@ -12,10 +12,10 @@ export class TodoListComponent implements OnInit {
   @select() todos;
   model: ITodo = {
     id: 0,
-    description: "",
-    responsible: "",
-    priority: "low",
-    isCompleted: false 
+    description: '',
+    responsible: '',
+    priority: 'low',
+    isCompleted: false
   };
   constructor(private ngRedux: NgRedux<IAppState>) { }
   ngOnInit() {
